@@ -1,0 +1,12 @@
+{
+  "name": "namaste-dsa",
+  "version": "1.0.0",
+  "main": "secondLargestNumber.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
