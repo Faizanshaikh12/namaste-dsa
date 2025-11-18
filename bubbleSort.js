@@ -29,6 +29,8 @@ console.log("Sorted array:", sortedArr);
 
 /*
 Dry Run Table:
+Time Complexity: O(n^2)
+Space Complexity: O(1)
 | Pass | i | j | array[j]  | array[j+1]  | Condition                          | Array State                  |
 |------|---|---|-----------|-------------|------------------------------------|------------------------------|
 | 1    | 0 | 0 | 64        | 34          | true                               | [34, 64, 25, 12, 22, 11, 90] |
