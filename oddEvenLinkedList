@@ -1,0 +1,36 @@
+/**
+ * @param {ListNode} head
+ * @return {ListNode}
+ */
+var oddEvenList = function(head) {
+    if (!head || !head.next) return head;
+
+    let oddHead = head,
+        evenHead = head.next,
+        odd  = oddHead,
+        even = evenHead;
+
+    while (even && even.next) {
+        odd.next  = even.next;   // next odd
+        odd       = odd.next;
+        even.next = odd.next;    // next even
+        even      = even.next;
+    }
+    odd.next = evenHead;         // concatenate
+    return oddHead;
+};
+
+// Example usage:
+function ListNode(val, next) {
+    this.val = (val===undefined ? 0 : val);
+    this.next = (next===undefined ? null : next);
+}
+let head = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4, new ListNode(5)))));
+let updatedHead = oddEvenList(head);
+console.log(updatedHead); // Output the modified linked list
+while (updatedHead !== null) {
+    console.log(updatedHead.val);
+    updatedHead = updatedHead.next;
+}
+// Time Complexity: O(n)
+// Space Complexity: O(1)
