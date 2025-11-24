@@ -40,3 +40,6 @@ while (current !== null) {
 console.log("Input List 1: [1, 2, 4]");
 console.log("Input List 2: [1, 3, 4]");
 console.log("Output List :", result); // [1, 1, 2, 3, 4, 4]
+
+// Time Complexity: O(n + m), where n and m are the lengths of the two lists.
+// Space Complexity: O(1) since we are not using any extra space for merging.
